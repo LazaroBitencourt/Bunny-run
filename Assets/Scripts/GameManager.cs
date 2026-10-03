@@ -90,8 +90,7 @@ public class GameManager : MonoBehaviour
         if (score > hiscore) {
             hiscore = score;
             PlayerPrefs.SetFloat("hiscore",hiscore);
-            hiscoreText.
-                text = Mathf.FloorToInt(hiscore).ToString("D5");
         }
+        hiscoreText.text = Mathf.FloorToInt(hiscore).ToString("D5");
     }
 }
