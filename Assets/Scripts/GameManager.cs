@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public float initialGameSpeed = 5f;
@@ -19,8 +20,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
     private float score;
+    AudioManager audioManager;
 
-    
     private void Awake()
     {
         if (Instance == null)
@@ -31,7 +32,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio")
+        .GetComponent<AudioManager>();
     }
     private void OnDestroy()
     {
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
+
         Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
         foreach (Obstacle obstacle in obstacles)
         {
@@ -65,6 +68,8 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
         updateHiscore();
+
+        audioManager.PlayMusic();
     }
 
     public void GameOver()
@@ -76,6 +81,9 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
         updateHiscore();
+       
+        audioManager.PlaySFX(audioManager.gameOver);
+        audioManager.StopMusic();
     }
     private void Update()
     {

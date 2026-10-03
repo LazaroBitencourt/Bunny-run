@@ -6,10 +6,12 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
-
+    AudioManager audioManager;
     private void Awake()
     {
         character = GetComponent<CharacterController>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio")
+        .GetComponent<AudioManager>();
     }
 
     private void OnEnable()
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 direction = Vector3.up * jumpForce;
+                audioManager.JumpSom();
             }
         }
         character.Move(direction * Time.deltaTime);
