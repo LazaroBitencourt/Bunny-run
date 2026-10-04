@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Obstaculo
+  - Audio
   layers:
   - Default
   - TransparentFX
