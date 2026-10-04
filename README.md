@@ -49,6 +49,10 @@ Controle um coelho, pule os obstáculos e tente bater o recorde.
 4. Pressione **Play**
 5. Ou baixe o arquivo zip do jogo.
 
+## Download
+
+[Baixar jogo (Windows)](../../releases/latest)
+
 ---
 
 ## Autor
