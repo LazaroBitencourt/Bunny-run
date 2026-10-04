@@ -53,6 +53,17 @@ Controle um coelho, pule os obstáculos e tente bater o recorde.
 
 [Baixar jogo (Windows)](../../releases/latest)
 
+## Aviso sobre antivírus
+
+O Windows pode marcar o jogo como suspeito (falso positivo).  
+Isso acontece com muitos jogos feitos em Unity que não têm assinatura digital.
+
+Se o Windows bloquear:
+1. Clique em "Mais informações"
+2. Depois em "Executar assim mesmo"
+
+O arquivo é seguro.
+
 ---
 
 ## Autor
