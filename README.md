@@ -47,6 +47,7 @@ Controle um coelho, pule os obstáculos e tente bater o recorde.
 2. Abra no Unity Hub
 3. Abra a cena principal
 4. Pressione **Play**
+5. Ou baixe o arquivo zip do jogo.
 
 ---
 
